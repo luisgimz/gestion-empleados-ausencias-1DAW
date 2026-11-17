@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox spacing="16" style="-fx-padding: 24; -fx-min-width: 380;"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.ModificarPerfilController">
+
+    <Label text="Modificar perfil"
+           style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <HBox spacing="16" alignment="CENTER_LEFT">
+        <ImageView fx:id="imgFotoPreview"
+                   fitWidth="80" fitHeight="80"
+                   preserveRatio="true"
+                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 2);"/>
+        <Button text="Seleccionar foto"
+                onAction="#seleccionarFoto"/>
+    </HBox>
+
+    <Separator/>
+
+    <GridPane hgap="12" vgap="10">
+        <Label text="Teléfono:"        GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="220"/>
+
+        <Label text="Dirección:"       GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDireccion" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="220"/>
+
+        <Label text="Email personal:"  GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtEmailPersonal" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="220"/>
+    </GridPane>
+
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Guardar" onAction="#guardar"/>
+        <Button text="Cancelar" onAction="#cancelar"/>
+    </HBox>
+
+</VBox>

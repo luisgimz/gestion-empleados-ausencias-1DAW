@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.PopupEliminarEmpleadoController"
+      spacing="10" style="-fx-padding: 20;" prefWidth="550">
+
+    <TextField fx:id="txtBuscar" promptText="Buscar por nombre o DNI..." />
+
+    <TableView fx:id="tablaEmpleados" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="250"/>
+            <TableColumn fx:id="colDni" text="DNI" prefWidth="120"/>
+            <TableColumn fx:id="colCuenta" text="Cuenta" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <Button text="Eliminar Empleado Completo" onAction="#eliminarSeleccionado"/>
+
+</VBox>

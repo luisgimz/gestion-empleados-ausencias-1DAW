@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.SolAusenciasController"
+      spacing="10"
+      alignment="TOP_LEFT"
+      maxHeight="Infinity"
+      maxWidth="Infinity"
+      VBox.vgrow="ALWAYS"
+      style="-fx-padding: 25 200;">
+
+    <Label text="Solicitud de Ausencias"
+           style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    <Label text="Rellena el formulario para enviar tu solicitud de ausencia."
+           style="-fx-font-size: 13; -fx-text-fill: #7f8c8d; -fx-padding: 0 0 6 0;"/>
+    <Separator/>
+
+    <VBox styleClass="ausencias-card" spacing="18" maxWidth="Infinity" VBox.vgrow="ALWAYS">
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Tipo permiso *" prefWidth="140"
+                   style="-fx-font-weight: bold;"/>
+            <ComboBox fx:id="cmbTipoPermiso" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                      promptText="Selecciona tipo de permiso"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Desde *" prefWidth="140"
+                   style="-fx-font-weight: bold;"/>
+            <DatePicker fx:id="dpDesde" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                        promptText="dd/MM/yyyy"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Hasta *" prefWidth="140"
+                   style="-fx-font-weight: bold;"/>
+            <DatePicker fx:id="dpHasta" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                        promptText="dd/MM/yyyy"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="TOP_LEFT">
+            <Label text="Motivo" prefWidth="140"
+                   style="-fx-font-weight: bold; -fx-padding: 5 0 0 0;"/>
+            <TextArea fx:id="txtMotivo" HBox.hgrow="ALWAYS" prefHeight="120"
+                      promptText="Escribe el motivo de tu ausencia..."
+                      wrapText="true"/>
+        </HBox>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Borrar" fx:id="btnBorrar" onAction="#borrarFormulario"
+                    prefWidth="100"/>
+            <Button text="Enviar" fx:id="btnEnviar" onAction="#enviarSolicitud"
+                    prefWidth="100" style="-fx-font-weight: bold;"/>
+        </HBox>
+
+    </VBox>
+
+</VBox>

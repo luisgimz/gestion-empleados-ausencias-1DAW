@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12" style="-fx-padding: 24; -fx-min-width: 360;"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.DetalleRegistroController">
+
+    <Label text="Registro Ausencia"
+           style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <GridPane hgap="12" vgap="10">
+        <Label text="ID Registro:"         GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblId"               GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="ID Solicitud:"        GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblIdSolicitud"      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Tipo Solicitud:"      GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblTipoSolicitud"    GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Empleado Solicitud:"  GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblEmpleado"         GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Administrador:"       GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblAdmin"            GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Comentario admin:"    GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblComentario"       GridPane.rowIndex="5" GridPane.columnIndex="1"
+               wrapText="true" maxWidth="200"/>
+
+        <Label text="Fecha Registro:"      GridPane.rowIndex="6" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblFechaRegistro"    GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Estado Solicitud:"  GridPane.rowIndex="7" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblEstado"         GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Separator/>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Volver" onAction="#volver"/>
+    </HBox>
+
+</VBox>

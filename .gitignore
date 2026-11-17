@@ -1,0 +1,17 @@
+# IDE
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+*.iml
+
+# Compilado
+target/
+build/
+out/
+bin/
+*.class
+
+# Local
+*.log

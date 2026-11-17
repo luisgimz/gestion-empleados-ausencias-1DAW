@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.LoginController"
+      fx:id="loginContainer"
+      alignment="CENTER" style="-fx-padding: 40;" spacing="12">
+
+    <Label text="Panel de Gestión"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    <Label text="Inicia sesión para continuar"
+           style="-fx-font-size: 13px; -fx-text-fill: #7f8c8d;"/>
+
+    <VBox spacing="10" maxWidth="400" style="-fx-padding: 20 0 0 0;">
+        <TextField fx:id="txtUsuario" promptText="Usuario" maxWidth="400"/>
+
+        <StackPane maxWidth="400">
+            <PasswordField fx:id="txtPassword" promptText="Contraseña" maxWidth="400"/>
+            <TextField fx:id="txtPasswordVisible" promptText="Contraseña" maxWidth="400"
+                       visible="false" managed="false"/>
+            <Button fx:id="btnOjo" text="👁"
+                    onAction="#togglePassword"
+                    style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-size: 13; -fx-padding: 0 8 0 0; -fx-text-fill: #9ca3af;"
+                    StackPane.alignment="CENTER_RIGHT"/>
+        </StackPane>
+
+        <Button text="Entrar" onAction="#onLogin" maxWidth="400"
+                style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblError" style="-fx-text-fill: #e74c3c;"/>
+    </VBox>
+
+</VBox>

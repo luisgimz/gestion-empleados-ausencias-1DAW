@@ -1,0 +1,306 @@
+
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 13px;
+}
+
+/*BARRA DE MENÚ SUPERIOR*/
+
+.menu-bar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 8 16;
+}
+
+.menu-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff; /* texto blanco sobre fondo oscuro */
+    -fx-padding: 6 14;
+    -fx-cursor: hand; /* cursor de mano al pasar por encima */
+    -fx-background-radius: 4; /* esquinas ligeramente redondeadas */
+    -fx-border-color: transparent;
+}
+
+.menu-bar .button:hover {
+    -fx-background-color: #3d5166; /* azul marino más claro al pasar el ratón */
+}
+
+/*BOTONES — todos los botones de la app */
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4; /* esquinas redondeadas */
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+#sidebar .button {
+    -fx-background-color: transparent; /* sin fondo */
+    -fx-text-fill: #2c3e50; /* texto azul marino oscuro — visible sobre blanco */
+    -fx-border-color: transparent;
+    -fx-padding: 10 16;
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+#sidebar .button:hover {
+    -fx-background-color: #ebf5fb; /* fondo azul muy claro al pasar el ratón */
+    -fx-text-fill: #2c3e50;
+}
+
+/*TABLA — estilo de TableView*/
+
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dde3ec; /* borde gris claro */
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2c3e50; /* cabecera azul marino oscuro */
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 10;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8fafc; /* gris muy claro en filas impares efecto zebra */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #d6eaf8; /* azul claro al seleccionar una fila */
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #2c3e50; /* texto oscuro sobre fila seleccionada */
+}
+
+/*CAMPOS DE ENTRADA */
+
+.text-field, .text-area, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced6e0; /* borde gris claro */
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6 10;
+}
+
+.text-field:focused, .text-area:focused, .password-field:focused {
+    -fx-border-color: #3498db; /* borde azul al escribir en el campo */
+}
+
+.combo-box, .date-picker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced6e0;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+/*ETIQUETAS */
+
+.label {
+    -fx-text-fill: #2c3e50; /* texto azul marino oscuro mismo color que la barra */
+}
+
+/*SEPARADOR */
+
+.separator .line {
+    -fx-border-color: #dde3ec; /* línea gris claro, sutil y discreta */
+}
+.column-header, .column-header-background, .column-header .filler {
+    -fx-background-color: #2c3e50; /* azul marino oscuro para todas las cabeceras */
+}
+
+.column-header .label {
+    -fx-text-fill: #ffffff; /* texto blanco en todas las cabeceras */
+    -fx-font-weight: bold;
+    -fx-padding: 8 10;
+}
+/* elimina la columna vacía de relleno a la derecha */
+.table-view .filler {
+    -fx-background-color: #2c3e50;
+}
+
+.column-header-background .filler {
+    -fx-background-color: #2c3e50;
+}
+
+.titled-pane {
+    -fx-border-color: #ced6e0;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #eaf1f8;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-cursor: hand;
+}
+
+.titled-pane > .title:hover {
+    -fx-background-color: #d6eaf8;
+}
+
+.titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: #2c3e50;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #ced6e0;
+    -fx-border-width: 0 1 1 1;
+    -fx-border-radius: 0 0 6 6;
+    -fx-padding: 10 12;
+}
+
+/* Botón "Eliminar Empleado Completo" dentro de Opciones Avanzadas:
+   color rojo para indicar que es una acción destructiva/peligrosa */
+.titled-pane .button:last-child {
+    -fx-background-color: #e74c3c;
+}
+
+.titled-pane .button:last-child:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* 2. SOLICITUD DE AUSENCIAS — Formulario centrado y encuadrado */
+
+.ausencias-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dde3ec;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 28 32 28 32;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+/*3. MI PERFIL — Panel lateral y contenido principal */
+
+/* Sidebar del perfil */
+#sidebar {
+    -fx-background-color: #f6f8fa;
+    -fx-border-color: #d0d7de;
+    -fx-border-width: 0 1 0 0;
+    -fx-min-width: 200;
+    -fx-pref-width: 200;
+}
+
+/* La foto de perfil queda enmarcada en un círculo de fondo */
+#imgFotoWrapper {
+    -fx-background-color: #dde3ec;
+    -fx-background-radius: 50;
+    -fx-padding: 4;
+}
+
+/* Nombre en el sidebar: más prominente */
+#lblNombre {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-alignment: CENTER;
+    -fx-padding: 0 10 4 10;
+}
+
+/* Email en el sidebar: texto secundario */
+#lblEmail {
+    -fx-font-size: 11;
+    -fx-text-fill: #656d76;
+    -fx-alignment: CENTER;
+    -fx-padding: 0 10 4 10;
+}
+
+/* Botón activo en el sidebar (clase añadida por controlador) */
+#sidebar .button-active {
+    -fx-background-color: #d6eaf8;
+    -fx-text-fill: #1a5276;
+    -fx-font-weight: bold;
+}
+
+/* Panel derecho del perfil: tarjeta con fondo y sombra */
+.perfil-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dde3ec;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 28 32;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+/* Títulos de sección dentro del perfil */
+.perfil-section-title {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 6 0;
+}
+
+/*   4. POPUP ELIMINAR EMPLEADO COMPLETO */
+
+/* Contenedor principal del popup */
+.popup-eliminar {
+    -fx-background-color: #fdfefe;
+    -fx-border-color: #dde3ec;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 4);
+    -fx-pref-width: 550;
+}
+
+/* Título del popup (si se añade un Label de cabecera) */
+.popup-eliminar-titulo {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 8 0;
+}
+
+/* Subtítulo o advertencia */
+.popup-eliminar-aviso {
+    -fx-font-size: 12;
+    -fx-text-fill: #e74c3c;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Buscador dentro del popup */
+.popup-eliminar .text-field {
+    -fx-border-color: #ced6e0;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 7 10;
+    -fx-font-size: 13;
+}
+
+.popup-eliminar .text-field:focused {
+    -fx-border-color: #3498db;
+}
+
+/* Botón de eliminar dentro del popup: rojo, ancho completo */
+.popup-eliminar .button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+}
+
+.popup-eliminar .button:hover {
+    -fx-background-color: #c0392b;
+}

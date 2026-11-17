@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.PerfilController"
+      style="-fx-padding: 0;" VBox.vgrow="ALWAYS">
+
+    <!-- IZQUIERDA SIDEBAR -->
+    <VBox fx:id="sidebar"
+          style="-fx-background-color: #f6f8fa; -fx-border-color: #d0d7de; -fx-border-width: 0 1 0 0;"
+          prefWidth="200" spacing="0">
+
+        <!-- FOTO -->
+        <VBox alignment="CENTER" style="-fx-padding: 20 10 10 10;">
+            <ImageView fx:id="imgFoto"
+                       fitWidth="80" fitHeight="80"
+                       preserveRatio="true"/>
+        </VBox>
+
+        <!-- NOMBRE -->
+        <Label fx:id="lblNombre"
+               wrapText="true"
+               alignment="CENTER"
+               style="-fx-font-weight: bold; -fx-font-size: 14; -fx-padding: 0 10 4 10;"
+               maxWidth="200"/>
+
+        <!-- CORREO -->
+        <Label fx:id="lblEmail"
+               wrapText="true"
+               alignment="CENTER"
+               style="-fx-font-size: 11; -fx-text-fill: #656d76; -fx-padding: 0 10 4 10;"
+               maxWidth="200"/>
+
+        <!-- ROL -->
+        <Label fx:id="lblRol"
+               alignment="CENTER"
+               style="-fx-font-size: 11; -fx-padding: 0 10 10 10;"
+               maxWidth="200"/>
+
+        <Separator/>
+        <Button fx:id="btnMiPerfil"
+                text="Mi Perfil"
+                maxWidth="Infinity"
+                onAction="#mostrarMiPerfil"
+                style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT; -fx-padding: 10 16; -fx-font-size: 13; -fx-cursor: hand;"/>
+
+        <Button fx:id="btnSolicitudes"
+                text="Mis Solicitudes"
+                maxWidth="Infinity"
+                onAction="#mostrarSolicitudes"
+                style="-fx-background-color: transparent; -fx-alignment: CENTER_LEFT; -fx-padding: 10 16; -fx-font-size: 13; -fx-cursor: hand;"/>
+
+        <Separator/>
+
+        <Region VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+    <VBox fx:id="panelDerecho" HBox.hgrow="ALWAYS"
+          styleClass="perfil-card"
+          style="-fx-padding: 25 150; -fx-margin: 20;" spacing="12">
+    </VBox>
+
+</HBox>

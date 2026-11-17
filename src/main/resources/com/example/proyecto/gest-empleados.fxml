@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.proyecto.controller.GestEmpleadosController"
+            style="-fx-padding: 20;"
+            VBox.vgrow="ALWAYS">
+
+    <center>
+        <TableView fx:id="tablaEmpleados">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" />
+                <TableColumn fx:id="colNombre" text="Nombre" />
+                <TableColumn fx:id="colEmail" text="Email" />
+                <TableColumn fx:id="colRol" text="Rol" />
+                <TableColumn fx:id="colDepartamento" text="Departamento" />
+                <TableColumn fx:id="colPuesto" text="Puesto" />
+                <TableColumn fx:id="colDni" text="DNI"/>
+                <TableColumn fx:id="colActivo" text="Activo"/>
+                <TableColumn fx:id="colEstadoLaboral" text="Estado"/>
+                <TableColumn fx:id="colFechaAlta" text="Fecha Alta"/>
+                <TableColumn fx:id="colFechaBaja" text="Fecha Baja"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox style="-fx-padding: 10 0 0 0;">
+
+            <HBox spacing="10">
+                <Button text="Añadir" onAction="#anyadirEmpleado" />
+                <Button text="Editar" onAction="#editarEmpleado" />
+                <Button text="Eliminar Usuario" onAction="#eliminarEmpleado" />
+            </HBox>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <TitledPane text="Opciones avanzadas" expanded="false">
+                <HBox spacing="10" style="-fx-padding: 8;">
+                    <Button text="Reiniciar Vacaciones" onAction="#reiniciarVacaciones"/>
+                    <Button text="Eliminar Empleado Completo" onAction="#eliminarEmpleadoCompleto"/>
+                </HBox>
+            </TitledPane>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

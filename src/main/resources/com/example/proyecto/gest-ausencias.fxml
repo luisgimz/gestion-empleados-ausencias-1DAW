@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.GestAusenciasController"
+      VBox.vgrow="ALWAYS">
+    <padding><Insets top="20" bottom="20" left="20" right="20"/></padding>
+
+    <Label text="Gestión Ausencias"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <Label text="Solicitudes pendientes" style="-fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Filtrar por:"/>
+        <ComboBox fx:id="cmbFiltroSol" promptText="Selecciona..." prefWidth="180" onAction="#onFiltroSolChanged"/>
+        <TextField fx:id="txtFiltroSol" promptText="Buscar..." prefWidth="180"/>
+        <DatePicker fx:id="dpFiltroSol"/>
+        <Button text="Aplicar" onAction="#aplicarFiltroSol"/>
+        <Button text="Limpiar" onAction="#limpiarFiltroSol"/>
+    </HBox>
+
+    <TableView fx:id="tablaSolicitudes" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNombre"      text="Nombre"/>
+            <TableColumn fx:id="colTipo"        text="Tipo Solicitud"/>
+            <TableColumn fx:id="colFechaInicio" text="Fecha Inicio"/>
+            <TableColumn fx:id="colFechaFin"    text="Fecha Fin"/>
+            <TableColumn fx:id="colDias"        text="Días Solicitados"/>
+            <TableColumn fx:id="colEstado"      text="Estado"/>
+            <TableColumn fx:id="colFechaSol"    text="Fecha Solicitud"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Ver Detalles" onAction="#verDetallesSolicitud"/>
+    </HBox>
+
+    <Label text="Empleados ausentes los próximos 7 días"
+           style="-fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Filtrar por:"/>
+        <ComboBox fx:id="cmbFiltroAu" promptText="Selecciona..." prefWidth="180" onAction="#onFiltroAuChanged"/>
+        <TextField fx:id="txtFiltroAu" promptText="Buscar..." prefWidth="180"/>
+        <DatePicker fx:id="dpFiltroAu"/>
+        <Button text="Aplicar" onAction="#aplicarFiltroAu"/>
+        <Button text="Limpiar" onAction="#limpiarFiltroAu"/>
+    </HBox>
+
+    <TableView fx:id="tablaAusentes" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colAuNombre"      text="Nombre"/>
+            <TableColumn fx:id="colAuDep"         text="Departamento"/>
+            <TableColumn fx:id="colAuTipo"        text="Tipo Solicitud"/>
+            <TableColumn fx:id="colAuFechaInicio" text="Fecha Inicio"/>
+            <TableColumn fx:id="colAuFechaFin"    text="Fecha Fin"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button text="Actualizar ambas tablas" onAction="#cargarTablas"/>
+        <Button text="Ver Detalles" onAction="#verDetallesAusente"/>
+    </HBox>
+
+</VBox>

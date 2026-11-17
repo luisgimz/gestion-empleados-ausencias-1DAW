@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.proyecto.controller.MenuController"
+            prefHeight="600.0" prefWidth="900.0">
+
+    <top>
+        <HBox fx:id="menuBar" styleClass="menu-bar" spacing="10" style="-fx-padding: 10;">
+
+            <Button text="Gestión Empleados"
+                    fx:id="btnEmpleados"
+                    onAction="#cargarEmpleados"/>
+            <Button text="Gestión Ausencias"
+                    fx:id="btnGestAusencias"
+                    onAction="#cargarGestAusencias"/>
+            <Button text="Registro Ausencias"
+                    fx:id="btnRegAusencias"
+                    onAction="#cargarRegAusencias"/>
+
+            <Button text="Solicitud Ausencias"
+                    fx:id="btnSolAusencias"
+                    onAction="#cargarSolAusencias"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Mi Perfil" onAction="#cargarPerfil"/>
+            <Button text="Logout"    onAction="#cerrarSesion"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <VBox fx:id="contenedor" alignment="CENTER"/>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyecto.controller.EditarEmpleadoController"
+      spacing="12">
+    <padding><Insets top="30" bottom="30" left="40" right="40"/></padding>
+
+    <Label text="Gestion de Empleado" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <HBox spacing="30" alignment="TOP_LEFT">
+
+        <GridPane hgap="15" vgap="10">
+
+            <Label text="DNI:"                     GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtDni"              GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="220"/>
+
+            <Label text="Nombre:"                  GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtNombre"           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Apellidos:"               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtApellidos"        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Email corporativo:"       GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtEmailCorporativo" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Email personal:"          GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="txtEmailPersonal"    GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            <Label text="Telefono:"                GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <TextField fx:id="txtTelefono"         GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+            <Label text="Direccion:"               GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            <TextField fx:id="txtDireccion"        GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+            <Label text="Numero SS:"               GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+            <TextField fx:id="txtNumeroSs"         GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+            <Label text="Estado laboral:"          GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+            <ComboBox fx:id="cmbEstado"            GridPane.columnIndex="1" GridPane.rowIndex="8" prefWidth="220"/>
+
+            <!-- Columna derecha -->
+            <Label text="Fecha nacimiento:"        GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <DatePicker fx:id="dpFechaNacimiento"  GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+            <Label text="Fecha alta:"              GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <DatePicker fx:id="dpFechaAlta"        GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            <Label text="Fecha baja:"              GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="dpFechaBaja"        GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+            <Label text="Dias vacaciones:"         GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtDiasVacaciones"   editable="false"
+                       GridPane.columnIndex="3"    GridPane.rowIndex="3"/>
+
+            <Label text="Usuario activo:"          GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+            <CheckBox fx:id="chkUsuarioActivo"     GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+
+            <Label text="Puesto:"                  GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+            <ComboBox fx:id="cmbPuesto"            GridPane.columnIndex="3" GridPane.rowIndex="5" prefWidth="190"/>
+
+            <Label text="Departamento:"            GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+            <Label fx:id="lblDepartamento"         GridPane.columnIndex="3" GridPane.rowIndex="6"
+                   style="-fx-text-fill: #3b82f6; -fx-font-weight: bold;"/>
+
+        </GridPane>
+
+        <VBox spacing="8" alignment="TOP_CENTER">
+            <Label text="Foto del empleado:" style="-fx-font-weight: bold;"/>
+            <ImageView fx:id="imgFotoPreview"
+                       fitWidth="120" fitHeight="120"
+                       preserveRatio="true"
+                       style="-fx-border-color: #cccccc; -fx-border-width: 1;"/>
+            <Button text="Cambiar foto" onAction="#seleccionarFoto" maxWidth="120"/>
+        </VBox>
+
+    </HBox>
+
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Guardar cambios"    onAction="#guardarCambios"/>
+        <Button text="Cambiar contraseña" onAction="#abrirCambiarPassword"/>
+        <Button text="Cancelar"           onAction="#cancelar"/>
+        <Label fx:id="lblMensaje"/>
+    </HBox>
+
+</VBox>
